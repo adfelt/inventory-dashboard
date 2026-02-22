@@ -119,7 +119,7 @@ def main():
     df = load_data(business_type)
     
     # Header
-    st.title(f"📦 Inventory Management Dashboard")
+    st.title("📦 Inventory Management Dashboard")
     st.markdown(f"### {business_type} Analytics")
     st.markdown("---")
     
@@ -246,9 +246,9 @@ def main():
         
         st.dataframe(
             reorder_df[display_cols].style.apply(
-                lambda x: ['background-color: #fee2e2' if x['stock_status'] == 'Critical' 
+                lambda x: ['background-color: #fee2e2' if x['stock_status'] == 'Critical'
                           else 'background-color: #fef3c7' if x['stock_status'] == 'Low'
-                          else '' for i in x],
+                          else '' for _ in x.index],
                 axis=1
             ),
             hide_index=True,
