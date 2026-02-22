@@ -91,7 +91,7 @@ def calculate_abc_analysis(df, value_col='total_value'):
 def main():
     # Sidebar
     with st.sidebar:
-        st.image("https://via.placeholder.com/200x80/0A2540/FFFFFF?text=Inventory+Pro", use_container_width=True)
+        st.markdown("## 📦 Inventory Pro")
         st.title("Dashboard Controls")
         
         business_type = st.selectbox(
